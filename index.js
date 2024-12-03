@@ -1,10 +1,14 @@
-const textBox = document.getElementById("voice-lines-container");
+const voiceLinesContainer = document.getElementById("voice-lines-container");
 
-const form = document.getElementById("voice-line-form");
+const voiceLineForm = document.getElementById("voice-line-form");
 const formText = document.getElementById("voice-line-text");
 
-form.addEventListener('submit', (event) => {
+voiceLineForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    console.log(formText.value);
+    const newVoiceLine = document.createElement("li");
+    newVoiceLine.textContent = formText.value;
+    voiceLinesContainer.appendChild(newVoiceLine);
+
+    formText.value = "";
 });
