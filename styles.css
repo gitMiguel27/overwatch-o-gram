@@ -2,6 +2,7 @@ body {
     background-color: #49516f;
     margin: 0px;
 }
+/* HEADER */
 header {
     background-color: #e0e2db;
     display: flex;
@@ -30,4 +31,31 @@ header {
 }
 .navbar a:hover {
     color: #d36135;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+.hero-choice {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-size: cover
+}
+.hero-button {
+    margin: auto;
+}
+#ashe-hero-choice {
+    background-position: 65% 100%;
+}
+#dva-hero-choice {
+    background-position: 35% 40%;
+}
+#lifeweaver-hero-choice {
+    background-position: 50% 30%;
 }

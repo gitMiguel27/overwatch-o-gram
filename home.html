@@ -8,46 +8,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--Header-->
     <header>
         <a href="/home.html" id="navbar-brand">Overwatch-O-Gram</a>
         <nav class="navbar">
             <ul>
                 <li><a href="/ashe.html">Ashe</a></li>
-                <li><a href="/lifeweaver.html">Lifeweaver</a></li>
                 <li><a href="/dva.html">D.Va</a></li>
+                <li><a href="/lifeweaver.html">Lifeweaver</a></li>
             </ul>
         </nav>
     </header>
-    <!--Navbar-->
-    <!-- <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/home.html"><strong>Overwatch-O-Gram</strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="/ashe.html">Ashe</a>
-                    <a class="nav-link" href="/cassidy.html">Cassidy</a>
-                    <a class="nav-link" href="/dva.html">D.Va</a>
-                </div>
-            </div>
-        </div>
-    </nav> -->
 
-    <h1>Welcome to Overwatch-O-Gram!</h1>
-
-    <h3>Choose a Hero:</h3>
+    <h1>Choose a Hero:</h1>
     <div class="home">
-        <button type="submit">
-            <a class="nav-link" href="/ashe.html">Ashe</a>
-        </button>
-        <button type="submit">
-            <a class="nav-link" href="/cassidy.html">Cassidy</a>
-        </button>
-        <button type="submit">
-            <a class="nav-link" href="/dva.html">D.Va</a>
-        </button>
+        <div class="hero-choice" id="ashe-hero-choice" style="background-image: url(/images/ashe-hero.jpg);">
+            <button type="submit" class="hero-button">
+                <a class="nav-link" href="/ashe.html">Ashe</a>
+            </button>
+        </div>
+        <div class="hero-choice" id="dva-hero-choice" style="background-image: url(/images/dva-hero.jpg);">
+            <button type="submit" class="hero-button">
+                <a class="nav-link" href="/dva.html">D.Va</a>
+            </button>
+        </div>
+        <div class="hero-choice" id="lifeweaver-hero-choice" style="background-image: url(/images/lifeweaver-hero.jpg);">
+            <button type="submit" class="hero-button">
+                <a class="nav-link" href="/lifeweaver.html">Lifeweaver</a>
+            </button>
+        </div>
     </div>
 
     <script src="index.js"></script>
