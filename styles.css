@@ -64,7 +64,7 @@ header {
     /* color: black; */
 }
 .hero-choice:hover .hero-title {
-    background-color: orange;
+    background-color: #d36135;
 }
 .hero-button {
     margin: auto;
