@@ -40,22 +40,39 @@ header {
     align-items: center;
     height: 800px;
 }
+#choose-hero-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center; 
+    color: white;
+}
 .hero-choice {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-size: cover
+    background-size: cover;
+}
+.hero-choice:hover {
+    opacity: 0.50;
+    cursor: pointer;
+}
+.hero-title {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.hero-choice:hover .hero-title {
+    color: rgb(255, 255, 255);
 }
 .hero-button {
     margin: auto;
 }
-#ashe-hero-choice {
+#ashe {
     background-position: 65% 100%;
 }
-#dva-hero-choice {
+#dva {
     background-position: 35% 40%;
 }
-#lifeweaver-hero-choice {
+#lifeweaver {
     background-position: 50% 30%;
 }
