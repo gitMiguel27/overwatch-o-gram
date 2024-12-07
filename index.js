@@ -1,3 +1,8 @@
+import { asheVoiceLines, dvaVoiceLines, lifeweaverVoiceLines } from "./voicelines.js";
+console.log("Ashe: ", asheVoiceLines);
+console.log("DVa: ", dvaVoiceLines);
+console.log("Lifeweaver: ", lifeweaverVoiceLines);
+
 // Hero Choice Functionality
 const heroChoiceContainer = document.getElementsByClassName("hero-choice");
 for (const heroChoice of heroChoiceContainer) {
