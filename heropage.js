@@ -1,6 +1,7 @@
 import { asheVoiceLines, dvaVoiceLines, lifeweaverVoiceLines } from "./voicelines.js";
 
 const header = document.querySelector('header');
+const heroID = header.nextElementSibling.id;
 const asheContainer = document.querySelector('div#asheVoiceLines ul.voice-lines-container');
 const dvaContainer = document.querySelector('div#dvaVoiceLines ul.voice-lines-container');
 const lifeweaverContainer = document.querySelector('div#lifeweaverVoiceLines ul.voice-lines-container');
@@ -33,7 +34,7 @@ function loadHeroVoiceLines(heroPage) {
             break;
     };
 };
-loadHeroVoiceLines(header.nextElementSibling.id);
+loadHeroVoiceLines(heroID);
 
 // Form Functionality
 voiceLineForm.addEventListener('submit', (event) => {
@@ -41,8 +42,18 @@ voiceLineForm.addEventListener('submit', (event) => {
 
     const newVoiceLine = document.createElement("li");
     newVoiceLine.textContent = formText.value;
-
-    // voiceLinesContainer.appendChild(newVoiceLine);
+    
+    switch (heroID) {
+        case 'asheVoiceLines':
+            asheContainer.prepend(newVoiceLine);
+            break;
+        case 'dvaVoiceLines':
+            dvaContainer.prepend(newVoiceLine);
+            break;
+        case 'lifeweaverVoiceLines':
+            lifeweaverContainer.prepend(newVoiceLine);
+            break;
+    };
 
     formText.value = "";
 });
