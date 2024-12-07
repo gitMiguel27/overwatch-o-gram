@@ -1,20 +1,48 @@
 import { asheVoiceLines, dvaVoiceLines, lifeweaverVoiceLines } from "./voicelines.js";
-console.log("Ashe: ", asheVoiceLines);
-console.log("DVa: ", dvaVoiceLines);
-console.log("Lifeweaver: ", lifeweaverVoiceLines);
 
-// Form Functionality
-const voiceLinesContainer = document.getElementById("voice-lines-container");
+const header = document.querySelector('header');
+const asheContainer = document.querySelector('div#asheVoiceLines ul.voice-lines-container');
+const dvaContainer = document.querySelector('div#dvaVoiceLines ul.voice-lines-container');
+const lifeweaverContainer = document.querySelector('div#lifeweaverVoiceLines ul.voice-lines-container');
 
 const voiceLineForm = document.getElementById("voice-line-form");
 const formText = document.getElementById("voice-line-text");
 
+function loadHeroVoiceLines(heroPage) {
+    switch (heroPage) {
+        case 'asheVoiceLines': 
+            asheVoiceLines.forEach(vl => {
+                const voiceLine = document.createElement('li');
+                voiceLine.textContent = vl;
+                asheContainer.appendChild(voiceLine);
+            });
+            break;
+        case 'dvaVoiceLines':
+            dvaVoiceLines.forEach(vl => {
+                const voiceLine = document.createElement('li');
+                voiceLine.textContent = vl;
+                dvaContainer.appendChild(voiceLine);
+            });
+            break;
+        case 'lifeweaverVoiceLines':
+            lifeweaverVoiceLines.forEach(vl => {
+                const voiceLine = document.createElement('li');
+                voiceLine.textContent = vl;
+                lifeweaverContainer.appendChild(voiceLine);
+            });
+            break;
+    };
+};
+loadHeroVoiceLines(header.nextElementSibling.id);
+
+// Form Functionality
 voiceLineForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const newVoiceLine = document.createElement("li");
     newVoiceLine.textContent = formText.value;
-    voiceLinesContainer.appendChild(newVoiceLine);
+
+    // voiceLinesContainer.appendChild(newVoiceLine);
 
     formText.value = "";
 });
