@@ -61,7 +61,6 @@ header {
     margin-top: 0px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.15);
-    /* color: black; */
 }
 .hero-choice:hover .hero-title {
     background-color: #d36135;
@@ -78,3 +77,15 @@ header {
 #lifeweaver {
     background-position: 50% 30%;
 }
+
+/* Form */
+.voice-lines-container {
+    list-style: none;
+    color: #d36135;
+
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 3fr);
+    grid-template-rows: repeat(5, 5fr);
+};

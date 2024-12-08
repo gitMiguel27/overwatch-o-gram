@@ -14,21 +14,24 @@ function loadHeroVoiceLines(heroPage) {
         case 'asheVoiceLines': 
             asheVoiceLines.forEach(vl => {
                 const voiceLine = document.createElement('li');
-                voiceLine.textContent = vl;
+                voiceLine.textContent = vl.toUpperCase();
+                voiceLine.classList.add('voice-line');
                 asheContainer.appendChild(voiceLine);
             });
             break;
         case 'dvaVoiceLines':
             dvaVoiceLines.forEach(vl => {
                 const voiceLine = document.createElement('li');
-                voiceLine.textContent = vl;
+                voiceLine.textContent = vl.toUpperCase();
+                voiceLine.classList.add('voice-line');
                 dvaContainer.appendChild(voiceLine);
             });
             break;
         case 'lifeweaverVoiceLines':
             lifeweaverVoiceLines.forEach(vl => {
                 const voiceLine = document.createElement('li');
-                voiceLine.textContent = vl;
+                voiceLine.textContent = vl.toUpperCase();
+                voiceLine.classList.add('voice-line');
                 lifeweaverContainer.appendChild(voiceLine);
             });
             break;
@@ -41,16 +44,19 @@ voiceLineForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const newVoiceLine = document.createElement("li");
-    newVoiceLine.textContent = formText.value;
+    newVoiceLine.textContent = formText.value.toUpperCase();
     
     switch (heroID) {
         case 'asheVoiceLines':
+            newVoiceLine.style.color = '#e0e2db';
             asheContainer.prepend(newVoiceLine);
             break;
         case 'dvaVoiceLines':
+            newVoiceLine.style.color = '#e0e2db';
             dvaContainer.prepend(newVoiceLine);
             break;
         case 'lifeweaverVoiceLines':
+            newVoiceLine.style.color = '#e0e2db';
             lifeweaverContainer.prepend(newVoiceLine);
             break;
     };
