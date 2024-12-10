@@ -50,7 +50,7 @@ function loadHeroVoiceLines(heroPage) {
             lifeweaverVoiceLines.forEach(vl => {
                 const voiceLineDiv = document.createElement('div');
                 voiceLineDiv.classList.add('voice-line-div');
-                voiceLineDiv.style.backgroundColor = '#e0e2db';
+                voiceLineDiv.style.backgroundColor = 'rgba(224, 226, 219, 0.50)';
                 voiceLineDiv.style.height = '50px';
                 voiceLineDiv.style.display = 'flex';
                 voiceLineDiv.style.justifyContent = 'center';
@@ -71,21 +71,29 @@ loadHeroVoiceLines(heroID);
 voiceLineForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const newVoiceLine = document.createElement("li");
+    const newVoiceLineDiv = document.createElement('div');
+    newVoiceLineDiv.classList.add('voice-line-div');
+    newVoiceLineDiv.style.backgroundColor = 'rgba(211, 97, 53, 0.85)';
+    newVoiceLineDiv.style.height = '50px';
+    newVoiceLineDiv.style.display = 'flex';
+    newVoiceLineDiv.style.justifyContent = 'center';
+    newVoiceLineDiv.style.alignItems = 'center';
+
+    const newVoiceLine = document.createElement('li');
     newVoiceLine.textContent = formText.value.toUpperCase();
-    
+    newVoiceLine.style.color = '#e0e2db';
+
+    newVoiceLineDiv.appendChild(newVoiceLine);
+
     switch (heroID) {
         case 'asheVoiceLines':
-            newVoiceLine.style.color = '#e0e2db';
-            asheContainer.prepend(newVoiceLine);
+            asheContainer.prepend(newVoiceLineDiv);
             break;
         case 'dvaVoiceLines':
-            newVoiceLine.style.color = '#e0e2db';
-            dvaContainer.prepend(newVoiceLine);
+            dvaContainer.prepend(newVoiceLineDiv);
             break;
         case 'lifeweaverVoiceLines':
-            newVoiceLine.style.color = '#e0e2db';
-            lifeweaverContainer.prepend(newVoiceLine);
+            lifeweaverContainer.prepend(newVoiceLineDiv);
             break;
     };
 
