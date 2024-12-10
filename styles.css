@@ -79,13 +79,27 @@ header {
 }
 
 /* Form */
+#asheVoiceLines, #dvaVoiceLines, #lifeweaverVoiceLines {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: 45% 100%;
+
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form#voice-line-form {
+    display: flex;
+    flex-direction: column;
+}
+
 .voice-lines-container {
     list-style: none;
-    color: #d36135;
-
-    display: grid;
-    width: 100%;
-    grid-gap: 10px;
-    grid-template-columns: repeat(6, 3fr);
-    grid-template-rows: repeat(5, 5fr);
-};
+    margin: auto;
+    padding-left: 0;
+}

@@ -13,26 +13,54 @@ function loadHeroVoiceLines(heroPage) {
     switch (heroPage) {
         case 'asheVoiceLines': 
             asheVoiceLines.forEach(vl => {
+                const voiceLineDiv = document.createElement('div');
+                voiceLineDiv.classList.add('voice-line-div');
+                voiceLineDiv.style.backgroundColor = '#e0e2db';
+                voiceLineDiv.style.height = '50px';
+                voiceLineDiv.style.display = 'flex';
+                voiceLineDiv.style.justifyContent = 'center';
+                voiceLineDiv.style.alignItems = 'center';
+                asheContainer.appendChild(voiceLineDiv);
+
+
                 const voiceLine = document.createElement('li');
                 voiceLine.textContent = vl.toUpperCase();
-                voiceLine.classList.add('voice-line');
-                asheContainer.appendChild(voiceLine);
+                voiceLine.style.color = '#d36135';
+                voiceLineDiv.appendChild(voiceLine);
             });
             break;
         case 'dvaVoiceLines':
             dvaVoiceLines.forEach(vl => {
+                const voiceLineDiv = document.createElement('div');
+                voiceLineDiv.classList.add('voice-line-div');
+                voiceLineDiv.style.backgroundColor = '#e0e2db';
+                voiceLineDiv.style.height = '50px';
+                voiceLineDiv.style.display = 'flex';
+                voiceLineDiv.style.justifyContent = 'center';
+                voiceLineDiv.style.alignItems = 'center';
+                dvaContainer.appendChild(voiceLineDiv);
+
                 const voiceLine = document.createElement('li');
                 voiceLine.textContent = vl.toUpperCase();
-                voiceLine.classList.add('voice-line');
-                dvaContainer.appendChild(voiceLine);
+                voiceLine.style.color = '#d36135';
+                voiceLineDiv.appendChild(voiceLine);
             });
             break;
         case 'lifeweaverVoiceLines':
             lifeweaverVoiceLines.forEach(vl => {
+                const voiceLineDiv = document.createElement('div');
+                voiceLineDiv.classList.add('voice-line-div');
+                voiceLineDiv.style.backgroundColor = '#e0e2db';
+                voiceLineDiv.style.height = '50px';
+                voiceLineDiv.style.display = 'flex';
+                voiceLineDiv.style.justifyContent = 'center';
+                voiceLineDiv.style.alignItems = 'center';
+                lifeweaverContainer.appendChild(voiceLineDiv);
+
                 const voiceLine = document.createElement('li');
                 voiceLine.textContent = vl.toUpperCase();
-                voiceLine.classList.add('voice-line');
-                lifeweaverContainer.appendChild(voiceLine);
+                voiceLine.style.color = '#d36135';
+                voiceLineDiv.appendChild(voiceLine);
             });
             break;
     };
