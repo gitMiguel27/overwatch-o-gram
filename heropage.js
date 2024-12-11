@@ -70,6 +70,11 @@ loadHeroVoiceLines(heroID);
 // Form Functionality
 voiceLineForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (!(/^[a-zA-Z0-9]*$/.test(formText.value))) {
+        window.alert(`Can't use special characters!\nTry again.`);
+        formText.value = "";
+        return;
+    };
 
     const newVoiceLineDiv = document.createElement('div');
     newVoiceLineDiv.classList.add('voice-line-div');
