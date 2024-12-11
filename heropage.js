@@ -87,15 +87,32 @@ voiceLineForm.addEventListener('submit', (event) => {
 
     switch (heroID) {
         case 'asheVoiceLines':
+            sendAlert(formText.value, heroID);
             asheContainer.prepend(newVoiceLineDiv);
             break;
         case 'dvaVoiceLines':
+            sendAlert(formText.value, heroID);
             dvaContainer.prepend(newVoiceLineDiv);
             break;
         case 'lifeweaverVoiceLines':
+            sendAlert(formText.value, heroID);
             lifeweaverContainer.prepend(newVoiceLineDiv);
             break;
     };
 
     formText.value = "";
 });
+
+function sendAlert(value, hero) {
+    switch (hero) {
+        case 'asheVoiceLines':
+            window.alert(`Boom goes the dynamite!\nYou submitted: ${value.toUpperCase()}`)
+            break;
+        case 'dvaVoiceLines':
+            window.alert(`You're number one!\nYou submitted: ${value.toUpperCase()}`)
+            break;
+        case 'lifeweaverVoiceLines':
+            window.alert(`A little voice line always helps!\nYou submitted: ${value.toUpperCase()}`)
+            break;
+    };
+};
